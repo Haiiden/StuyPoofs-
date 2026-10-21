@@ -2,7 +2,6 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import static com.qualcomm.robotcore.hardware.DcMotor.ZeroPowerBehavior.BRAKE;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
@@ -13,7 +12,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.PIDFCoefficients;
 
 @Disabled
-@TeleOp
+@TeleOp(name = "stuypoopsshooterv1")
 
 public class stuypoopsshooterv1 extends OpMode{
     
@@ -32,7 +31,8 @@ public class stuypoopsshooterv1 extends OpMode{
     }
     
     public void init(){
-        // launcher = hardwareMap.get(DcMotorEx.class, "launcher");
+        launcher0 = hardwareMap.get(DcMotorEx.class, "launcher0");
+        launcher1 = hardwareMap.get(DcMotorEx.class, "launcher1");
         launch();
         
         launcher0.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
